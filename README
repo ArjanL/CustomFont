@@ -1,43 +1,43 @@
-CustomFont is a simple Ruby Class for generating images with text in
+CustomFont is a simple Ruby class for generating images with text in
 a custom font using rMagick. You can quickly replace any tag,
 especially h1, h2, h3 an p by the image without losing the tags string
 content.
 
 Install ImageMagick.
 
-Bundle rmagick with your Railsapp.
+Bundle rMagick with your Railsapp.
 
 Create the dir "custom_font" in $railsapp/public/images/ and chmod
 it according to your rails user rights.
 
-Download custom_font.rb and put it into $railsapp/config/initializers/.
+Download "custom_font.rb" and put it into $railsapp/config/initializers/.
 
 In the same dir, add an initializer called "constants.rb":
 MAIN_FONT = "Tahoma-Bold"
 
-To get a list of available Fonts, and their names, hit
+To get a list of available fonts, and their names, hit
 >> convert -list font
 on the same machine.
 
 Go into your ApplicationHelper and add this method:
-	def custom_font(text="CustomFont", tag="h1")
-		case tag
-			when "h1"
-				pt = CustomFont.pt_h1
-			when "h2"
-				pt = CustomFont.pt_h2
-			when "h3"
-				pt = CusomtFont.pt_h3
-			else
-				pt = CustomFont.pt_p
-		end
-		CustomFont.new(text, MAIN_FONT, pt, tag).to_s
-	end
+  def custom_font(text="CustomFont", tag="h1")
+    case tag
+      when "h1"
+        pt = CustomFont.pt_h1
+      when "h2"
+        pt = CustomFont.pt_h2
+      when "h3"
+        pt = CusomtFont.pt_h3
+      else
+        pt = CustomFont.pt_p
+    end
+    CustomFont.new(text, MAIN_FONT, pt, tag).to_s
+  end
 
-Go into any View you like and type:
+Go into any view you like and type:
 <%= custom_font "My Text", "h1" %>
 
-Be aware to use UTF8 Encoding.
+Be aware to use UTF8 encoding.
 
 By looking at the custom_font.rb file, you will see how simple it works.
 
@@ -46,7 +46,7 @@ def initialize(text="CustomFont", font="Verdana-Bold", pt=PT_H1, tag="h1", kill=
 text: What text to render.
 font: What font to use.
 pt: Font-size in point.
-tag: what tag to replace.
+tag: What tag to replace.
 kill: Delete the image file, if our instance gets destroyed by the GC?
-root_dir: path to the only dir, CustomFont requires, from the view of the File-Class.
-url: path to the images, same path as root_dir but from the view of the browser.
+root_dir: Path to the only dir, CustomFont requires, from the view of the File-Class.
+url: Path to the images, same path as root_dir but from the view of the browser.
