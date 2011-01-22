@@ -37,6 +37,8 @@ Go into your ApplicationHelper and add this method:
 Go into any View you like and type:
 <%= custom_font "My Text", "h1" %>
 
+Be aware to use UTF8 Encoding.
+
 By looking at the custom_font.rb file, you will see how simple it works.
 
 You will find a class called CustomFont, with the following constructor:
