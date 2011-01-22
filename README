@@ -37,7 +37,7 @@ Go into your ApplicationHelper and add this method:
   end
 
 Go into any view you like and type:
-<%= custom_font "My Text", "h1" %>
+<%= raw custom_font("My Text", "h1") %>
 
 Be aware to use UTF8 encoding.
 
