@@ -1,10 +1,10 @@
 class CustomFont
   attr_reader :filename
   
-  PT_H1	= 45
-  PT_H2	= 35
-  PT_H3	= 25
-  PT_P		= 14
+  PT_H1  = 45
+  PT_H2  = 35
+  PT_H3  = 25
+  PT_P    = 14
   
   def self.pt_h1
     PT_H1
@@ -27,14 +27,14 @@ class CustomFont
   end
 
   def initialize(text="CustomFont", font="Verdana-Bold", pt=PT_H1, tag="h1", kill=false, root_dir="public/images/custom_font/", url="/images/custom_font/")
-    @text				= text
-    @font				= font
-    @pt						= pt
-    @tag					= tag
-    @kill					= kill
-    @root_dir		= root_dir
-    @url					= url
-    @filename		= (@font + "_" + @text[0,30] + "_" + @pt.to_s.gsub(".","-") + "_" + @tag + ".jpg").gsub(/[\s]+/, "_")
+    @text = text
+    @font = font
+    @pt = pt
+    @tag = tag
+    @kill = kill
+    @root_dir = root_dir
+    @url = url
+    @filename = (@font + "_" + @text[0,30] + "_" + @pt.to_s.gsub(".","-") + "_" + @tag + ".jpg").gsub(/[\s]+/, "_")
   end
   
   def url
@@ -85,7 +85,7 @@ class CustomFont
   end
   
   def to_html
-    "<#{@tag} style=\"background: url('#{@url + self.filename}') no-repeat; width: #{self.width.to_s}px; height: #{self.height.to_s}px; text-indent: -9999px; overflow: hidden;\">#{@text}</#{@tag}>"
+    "<#{@tag} style=\"background: url('#{self.url}') no-repeat; width: #{self.width.to_s}px; height: #{self.height.to_s}px; text-indent: -9999px; overflow: hidden;\">#{@text}</#{@tag}>"
   end
   
   def to_s
