@@ -1,10 +1,10 @@
 class CustomFont
   attr_reader :filename
   
-  PT_H1  = 45
-  PT_H2  = 35
-  PT_H3  = 25
-  PT_P    = 14
+  PT_H1 = 45
+  PT_H2 = 35
+  PT_H3 = 25
+  PT_P = 14
   
   def self.pt_h1
     PT_H1
