@@ -37,8 +37,16 @@ class CustomFont
     @filename		= (@font + "_" + @text[0,30] + "_" + @pt.to_s.gsub(".","-") + "_" + @tag + ".jpg").gsub(/[\s]+/, "_")
   end
   
+  def url
+    @url + self.filename
+  end
+  
+  def location
+    @root_dir + self.filename
+  end
+  
   def exists?
-    File.exists?(@root_dir + self.filename)
+    File.exists?(self.location)
   end
   
   def width
