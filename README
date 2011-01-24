@@ -29,7 +29,7 @@ Go into your ApplicationHelper and add this method:
       when "h2"
         pt = CustomFont.pt_h2
       when "h3"
-        pt = CusomtFont.pt_h3
+        pt = CustomFont.pt_h3
       else
         pt = CustomFont.pt_p
     end
