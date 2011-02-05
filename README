@@ -6,6 +6,8 @@ content.
 Live Demo: http://www.9thsky.info/custom_font
 
 Install ImageMagick.
+and
+gem install rmagick
 
 Bundle rMagick with your Railsapp.
 

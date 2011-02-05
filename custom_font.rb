@@ -78,7 +78,7 @@ class CustomFont
         self.fill = "black"
       }
       
-      image.write(@root_dir + self.filename)
+      image.write(self.location)
     end
     
     self
@@ -94,7 +94,7 @@ class CustomFont
   
   def __destroy
     if @kill
-      File.delete(@root_dir + self.filename)
+      File.delete(self.location)
     end
   end
 end
