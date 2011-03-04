@@ -68,7 +68,7 @@ class CustomFont
         Dir.mkdir(@root_dir)
       end
       
-      `convert -font 'Innovage-Regular' -pointsize #{@pt} label:'#{@text}' #{self.location}`
+      `convert -font '#{@font}' -pointsize #{@pt} label:'#{@text}' #{self.location}`
     end
     
     self
