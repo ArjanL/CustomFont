@@ -68,21 +68,7 @@ class CustomFont
         Dir.mkdir(@root_dir)
       end
       
-      require "RMagick"
-      
-      image = Magick::ImageList.new
-      image.new_image(self.width, self.height)
-      
-      text = Magick::Draw.new
-      text.font = @font
-      text.pointsize = @pt
-      text.gravity = Magick::WestGravity
-      
-      text.annotate(image, 0, 0, 0, 0, @text) {
-        self.fill = "black"
-      }
-      
-      image.write(self.location)
+      `convert -font 'Innovage-Regular' -pointsize #{@pt} label:'#{@text}' #{self.location}`
     end
     
     self
