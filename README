@@ -7,6 +7,8 @@ Live Demo: http://www.9thsky.info/custom_font
 
 Install ImageMagick.
 
+Bundle the rMagick gem.
+
 Create the dir "custom_font" in $railsapp/public/images/ and chmod
 it according to your rails user rights.
 
