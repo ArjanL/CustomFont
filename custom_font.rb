@@ -38,7 +38,7 @@ class CustomFont
     @kill = kill
     @root_dir = root_dir
     @url = url
-    @filename = (@font + "_" + @text[0,30] + "_" + @pt.to_s.gsub(".","-") + "_" + @tag + ".jpg").gsub(/[\s]+/, "_")
+    @filename = (@font + "_" + @text[0,30].scan(/[0-9A-Za-z]+/).join + "_" + @pt.to_s.gsub(".","-") + "_" + @tag + ".jpg").gsub(/[\s]+/, "_")
   end
 
   def url
