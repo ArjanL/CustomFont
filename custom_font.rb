@@ -1,6 +1,6 @@
 # CustomFont
 # by Joern Akkermann
-# joern@9thsky.info
+# joern@worldlancers.info
 
 class CustomFont
   attr_reader :filename
