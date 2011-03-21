@@ -3,6 +3,8 @@ a custom font using rMagick. You can quickly replace any tag,
 especially h1, h2, h3 an p by the image without losing the tags string
 content.
 
+Live Demo: http://www.worldlancers.info/custom_font
+
 Install ImageMagick.
 
 Bundle the rMagick gem.
