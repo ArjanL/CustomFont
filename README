@@ -3,7 +3,7 @@ a custom font using rMagick. You can quickly replace any tag,
 especially h1, h2, h3 an p by the image without losing the tags string
 content.
 
-Live Demo: http://www.worldlancers.info/custom_font
+(Live-Demo actually not available.)
 
 Install ImageMagick.
 
@@ -20,6 +20,17 @@ MAIN_FONT = "Tahoma-Bold"
 To get a list of available fonts, and their names, hit
 >> convert -list font
 on the same machine.
+
+Excursion: adding new fonts on a linux machine:
+You need to download your font.
+Copy your font into "/usr/share/fonts/truetype/.".
+Run the command:
+>> fc-cache
+Your fonts are now being (re-)loaded.
+To get a list of fonts available to ImageMagick/rMagick,
+  see the entry one paragraph above.
+  Your font should be in this list.
+Use the exact name, just as in the list (mostly "Fontname-Regular").
 
 Go into your ApplicationHelper and add this method:
   def custom_font(text="CustomFont", tag="h1")
