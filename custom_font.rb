@@ -1,6 +1,6 @@
 # CustomFont
 # by Joern Akkermann
-# joern@worldlancers.info
+# clouddryer@googlemail.com
 
 class CustomFont
   attr_reader :filename
