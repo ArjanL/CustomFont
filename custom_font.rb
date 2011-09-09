@@ -27,7 +27,7 @@ class CustomFont
   end
 
   def self.pt_to_px(pt)
-    (Float(96 * pt / 72)).round
+    (96 * pt / 72).round
   end
 
   def initialize(text="CustomFont", font="Verdana-Bold", pt=PT_H1, tag="h1", kill=false, root_dir="public/images/custom_font/", url="/images/custom_font/")
