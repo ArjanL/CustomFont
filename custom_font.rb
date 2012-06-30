@@ -1,6 +1,8 @@
 # CustomFont
 # by Joern Akkermann
-# clouddryer@googlemail.com
+# mail@jakk.de
+#
+# bundle / require the "RMagick" Gem
 
 class CustomFont
   attr_reader :filename
